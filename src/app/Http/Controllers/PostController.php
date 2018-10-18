@@ -41,6 +41,7 @@ class PostController extends Controller
     ]);
 
     $test = 'test';
+    $test1 = 'test';
     print ($request);
   }
 

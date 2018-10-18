@@ -10,7 +10,7 @@ node {
     -Dsonar.projectKey=relipa-hoainv-laravel-5v5-blog \\
     -Dsonar.github.pullRequest=$GITHUB_PR_NUMBER \\
     -Dsonar.github.repository=relipa-hoainv/laravel-5v5-blog \\
-    -Dsonar.github.oauth=61ed9b269e53333af5998389569bfacb8c9a17e7 \\
+    -Dsonar.github.oauth=66a57223217e7f981e07b5574c4a34352a47a029 \\
     -Dsonar.login=dcaeb3a4f70c16176da4b271f97aae2907c1453c\\
     -Dsonar.sourceEncoding=UTF-8 \\
     -Dsonar.verbose=true \\
