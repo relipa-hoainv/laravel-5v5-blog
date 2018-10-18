@@ -1,4 +1,4 @@
-node {
+node('Windows10') {
     checkout scm
 
     stage('Build') {
