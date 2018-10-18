@@ -37,6 +37,7 @@ class PostController extends Controller
       'title' => 'Add Post'
     ]);
 
+    $test = 'test';
     print ($request);
   }
 
