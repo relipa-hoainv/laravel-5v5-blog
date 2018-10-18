@@ -3,12 +3,11 @@ node {
 
     stage('SonarQube Check') {
         sh '''sonar-scanner \\
-    -Dsonar.projectKey=${gitlabSourceNamespace}-${gitlabSourceRepoName} \\
     -Dsonar.sources=/var/lib/jenkins/workspace/${JOB_NAME} \\
     -Dsonar.exclusions=public/**,storage/**,vendor/**,resources/views/**,**.css,**.scss,**.less,resources/assets/js/libraries/** \\
     -Dsonar.analysis.mode=preview \\
     -Dsonar.projectKey=relipa-hoainv-laravel-5v5-blog \\
-    -Dsonar.github.pullRequest=$GITHUB_PR_NUMBER \\
+    -Dsonar.github.pullRequest=2 \\
     -Dsonar.github.repository=relipa-hoainv/laravel-5v5-blog \\
     -Dsonar.github.oauth=66a57223217e7f981e07b5574c4a34352a47a029 \\
     -Dsonar.login=dcaeb3a4f70c16176da4b271f97aae2907c1453c\\
