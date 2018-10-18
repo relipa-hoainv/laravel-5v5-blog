@@ -2,9 +2,7 @@ node {
     checkout scm
 
     stage('Build') {
-        checkout scm
-        sh 'echo ${USER}'
-        sh 'pwd && cd src && /usr/local/bin/composer install'
+        sh 'pwd && cd src && composer install'
         docker.build("kyo88kyo/nginx", "-f Dockerfile-nginx .")
         docker.build("kyo88kyo/blog")
     }
