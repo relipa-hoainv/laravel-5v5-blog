@@ -20,7 +20,7 @@ node('Windows10') {
     stage('Deploy') {
         bat 'cd src && docker-compose down'
         bat 'cd src && docker-compose up -d'
-        sleep time: 10000, unit: 'NANOSECONDS'
+        sleep 10000
         bat 'cd src && docker-compose run web php artisan migrate'
     }
 
