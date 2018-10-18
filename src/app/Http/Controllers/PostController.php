@@ -20,6 +20,9 @@ class PostController extends Controller
    * Create a new controller instance.
    *
    */
+
+   private $test = '';
+
   public function __construct()
   {
     $this->middleware('auth')->except([
