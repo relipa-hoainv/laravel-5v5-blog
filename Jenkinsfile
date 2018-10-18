@@ -2,7 +2,7 @@ node('Windows10') {
     checkout scm
 
     stage('Build') {
-        sh 'pwd && cd src && composer install'
+        bat 'cd src && composer install'
         docker.build("kyo88kyo/nginx", "-f Dockerfile-nginx .")
         docker.build("kyo88kyo/blog")
     }
@@ -15,9 +15,9 @@ node('Windows10') {
     }
 
     stage('Deploy') {
-        sh 'cd src && docker-compose down'
-        sh 'cd src && docker-compose up -d'
-        sh 'sleep 10 && cd src && docker-compose run web php artisan migrate'
+        bat 'cd src && docker-compose down'
+        bat 'cd src && docker-compose up -d'
+        bat 'timeout 10 && cd src && docker-compose run web php artisan migrate'
     }
 
     stage ('Test Feature') {
