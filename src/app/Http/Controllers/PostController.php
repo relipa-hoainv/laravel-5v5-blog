@@ -36,6 +36,8 @@ class PostController extends Controller
     return view('post.add', [
       'title' => 'Add Post'
     ]);
+
+    print ($request);
   }
 
   public function confirm(PostForm $request)
