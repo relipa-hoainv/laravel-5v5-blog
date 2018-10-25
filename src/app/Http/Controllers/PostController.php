@@ -20,6 +20,9 @@ class PostController extends Controller
    * Create a new controller instance.
    *
    */
+
+   private $test = '';
+
   public function __construct()
   {
     $this->middleware('auth')->except([
@@ -36,6 +39,10 @@ class PostController extends Controller
     return view('post.add', [
       'title' => 'Add Post'
     ]);
+
+    $test = 'test';
+    $test1 = 'test';
+    print ($request);
   }
 
   public function confirm(PostForm $request)
